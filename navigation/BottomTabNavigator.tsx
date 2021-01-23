@@ -23,7 +23,7 @@ export default function BottomTabNavigator() {
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
-        name="TabOne"
+        name="Oyunlar"
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -32,7 +32,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="Ayarlar"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -75,7 +75,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="DetailScreen"
         component={DetailScreen}
-        options={{ title: "Oyun Detayı" }}
+        options={{ title: "Oyun Haberi Detayı" }}
       />
     </TabOneStack.Navigator>
   );

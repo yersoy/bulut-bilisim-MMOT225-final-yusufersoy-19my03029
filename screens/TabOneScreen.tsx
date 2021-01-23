@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-
+import { Icon } from "react-native-elements";
 import EditScreenInfo from "../components/EditScreenInfo";
 import * as firebase from "firebase";
 export default function TabOneScreen({ navigation }) {
@@ -25,6 +25,10 @@ export default function TabOneScreen({ navigation }) {
           id: child.key,
           title: child.val().title,
           content: child.val().content,
+          image: child.val().image,
+          newscontent: child.val().newscontent,
+          comments: child.val().comments,
+          likes: child.val().likes,
           image: child.val().image,
         });
       });
@@ -61,14 +65,15 @@ export default function TabOneScreen({ navigation }) {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("ChatScreen");
-        }}
-        style={styles.fab}
-      >
-        <Text style={styles.fabIcon}>+</Text>
-      </TouchableOpacity>
+      <View style={styles.fab}>
+        <Icon
+          raised
+          name="plus"
+          type="font-awesome"
+          color="#f50"
+          onPress={() =>  navigation.navigate("ChatScreen")}
+        />
+      </View>
     </View>
   );
 }
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     right: 20,
     bottom: 20,
-    backgroundColor: "#03A9F4",
+
     borderRadius: 30,
     elevation: 8,
   },

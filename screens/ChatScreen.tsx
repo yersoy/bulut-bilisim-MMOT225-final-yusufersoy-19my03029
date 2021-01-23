@@ -14,6 +14,8 @@ export default function ChatScreen({ navigation }) {
   const [title, setTitle] = React.useState("");
   const [content, setContent] = React.useState("");
   const [image, setImage] = React.useState("");
+  const [newscontent, setNewsContent] = React.useState("");
+
   const onPress = () => {
     var myref = firebase.database().ref("news");
     myref.once("value", (snapshot) => {
@@ -32,33 +34,39 @@ export default function ChatScreen({ navigation }) {
     <View style={styles.container}>
       <View style={styles.inputView}>
         <TextInput
-          secureTextEntry
           style={styles.inputText}
           placeholder="Oyun Adı"
           onChangeText={(text) => setTitle(text)}
-          placeholderTextColor="#003f5c"
+          placeholderTextColor="#fafafa"
           value={title}
         />
       </View>
 
       <View style={styles.inputView}>
         <TextInput
-          secureTextEntry
           style={styles.inputText}
-          placeholder="Oyun Açıklaması"
+          placeholder="Oyun Açıklaması Kısa"
           onChangeText={(text) => setContent(text)}
-          placeholderTextColor="#003f5c"
+          placeholderTextColor="#fafafa"
           value={content}
         />
       </View>
 
       <View style={styles.inputView}>
         <TextInput
-          secureTextEntry
           style={styles.inputText}
-          placeholder="Oyun Resmi"
+          placeholder="Oyun Açıklaması Tamamı"
+          onChangeText={(text) => setNewsContent(text)}
+          placeholderTextColor="#fafafa"
+          value={newscontent}
+        />
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.inputText}
+          placeholder="Oyun Resmi URL"
           onChangeText={(text) => setImage(text)}
-          placeholderTextColor="#003f5c"
+          placeholderTextColor="#fafafa"
           value={image}
         />
       </View>
@@ -71,7 +79,6 @@ export default function ChatScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  
     alignItems: "center",
     justifyContent: "center",
   },
