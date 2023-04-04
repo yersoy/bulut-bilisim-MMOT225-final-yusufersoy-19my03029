@@ -1,7 +1,7 @@
 [# bulut-bilisim-MMOT225-final-yusufersoy-19my03029
 Yusuf Ersoy 19MY03029 Bulut Bilişim Final Ödevi
 
-Final projesi React Native ile hazırladığım bu ödevin hedefi oyuncular için haber platformu olmayı hedeflemesidir.isteyen herkes haber ekleye bilir haberi görüntüleyebilir ve yorum yapabilir.haberler silinemez ve düzenlenemez. kimin yazdığı takip edilemez
+Final projesi <b>React Native</b> ile hazırladığım bu ödevin hedefi oyuncular için haber platformu olmayı hedeflemesidir.isteyen herkes haber ekleye bilir haberi görüntüleyebilir ve yorum yapabilir.haberler silinemez ve düzenlenemez. kimin yazdığı takip edilemez
 <div style="display:flex">
 <img src="https://user-images.githubusercontent.com/20680870/229783699-a9af1507-185a-41b4-befb-8f3310b0fea0.png" alt="Your image title" width="230"/>
 <img src="https://user-images.githubusercontent.com/20680870/229783978-bb9540a7-4cc6-4d29-9a7e-2181fdaa45eb.png" alt="Your image title" width="230"/>
